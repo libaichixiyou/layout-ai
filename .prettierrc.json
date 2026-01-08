@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false,
+  "printWidth": 120,
+  "htmlWhitespaceSensitivity": "ignore",
+  "braceStyle": "preserve",
+  "bracketSpacing": false,
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": ["*.html", "*.vue"],
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": ["*.js", "*.ts"],
+      "options": {
+        "printWidth": 120
+      }
+    }
+  ]
+}
