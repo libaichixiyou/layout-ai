@@ -60,18 +60,18 @@ export default class Workbench extends WorkbenchBase {
    */
   protected async initToken(context: ApplicationContext) {
     let userId: string = "";
-    let credentialId: string = "czs_h3lKXp68Zu111I9QRoHozNw8atYhlJKCEHkRpnC8INTORvve1UFFA4CKkeKSCrONI";
+    let credentialId: string = "czs_h1v7oM49rlVsjH4hNFyqFDVZoRla6r0C61nSiifjLRBspsHGurifab8sz2h881CR5";
     let expires: Date | undefined = new Date(Date.now() + 2 * 60 * 60 * 1000);
 
     if (context.credential) {
-      if (context.credential.expires) {
-        const expiresTime = new Date(context.credential.expires + "").getTime();
-        const nowTime = new Date().getTime();
-        if (expiresTime > nowTime) {
-          console.log("token未过期，继续使用旧token");
-          return;
-        }
-      }
+      // if (context.credential.expires) {
+      //   const expiresTime = new Date(context.credential.expires + "").getTime();
+      //   const nowTime = new Date().getTime();
+      //   if (expiresTime > nowTime) {
+      //     console.log("token未过期，继续使用旧token");
+      //     return;
+      //   }
+      // }
 
       if (context.credential.userId) {
         userId = context.credential.userId;
